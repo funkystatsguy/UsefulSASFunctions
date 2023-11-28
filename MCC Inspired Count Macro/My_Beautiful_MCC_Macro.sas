@@ -1,17 +1,4 @@
-
 *Import a dataset containing a list of possible chronic conditions;
-proc import out = conds
-	datafile = "~\githubtest\githubtest\MCC Inspired Count Macro\Datasets\mock_MCC_conditions.csv"
-	dbms = csv replace;
-run;
-
-*Import a dataset containing a list of chronic conditions people may have;
-proc import out = pats
-	datafile = "~\githubtest\githubtest\MCC Inspired Count Macro\Datasets\mock_MCC_patients.csv"
-	dbms = csv replace;
-run;
-
-
 %macro mcc_macro1 (df1, df2);
 *Create empty datasets for later use;
 data Total_Outcomes;
@@ -119,4 +106,4 @@ run;
 
 %mend mcc_macro1;
 
-%mcc_macro1(df1 = pats, df2 = conds);
+
