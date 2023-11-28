@@ -84,9 +84,9 @@ run;
 
 	data &df2name.bindata;
 	set &df2name.dat;
-	if &df2name.val >0 then &df2name.bin = 1;
-	else &df2name.bin = 0;
-	keep &df2name.bin;
+	if &df2name.val >0 then &df2name = 1;
+	else &df2name = 0;
+	keep &df2name;
 	run;
 
 	data Total_Outcomes;
