@@ -1,5 +1,3 @@
-libname MyMacros "SAS-library";
-options mstored sasmstore = My_SAS_MACROS;
 
 *Import a dataset containing a list of possible chronic conditions;
 proc import out = conds
@@ -14,8 +12,7 @@ proc import out = pats
 run;
 
 
-%macro mcc_macro1 (df1, df2) / store source;
-	des = "MCC_MACRO1";
+%macro mcc_macro1 (df1, df2);
 *Create empty datasets for later use;
 data Total_Outcomes;
 run;
